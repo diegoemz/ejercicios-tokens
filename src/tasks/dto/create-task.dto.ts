@@ -1,9 +1,11 @@
-import { ApiProperty } from "@nestjs/swagger";
+import { ApiProperty } from '@nestjs/swagger';
+import { IsString } from 'class-validator';
 
-export class CreateTaskDto{
-    @ApiProperty({example: 'Tarea 1', description: 'Nombre de la tarea'})
-    titulo: string;
-
-    @ApiProperty({example: true, description:'Tarea completada'})
-    completada:boolean;
+export class CreateTaskDto {
+  @ApiProperty({ 
+    example: 'Completar informe mensual', 
+    description: 'Título descriptivo de la tarea' 
+  })
+  @IsString()
+  titulo: string;
 }
