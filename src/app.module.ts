@@ -4,6 +4,7 @@ import { Task } from './tasks/task.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
 import { TasksModule } from './tasks/tasks.module';
+import { Product } from './products/product.entity';
 
 @Module({
   imports: [
@@ -14,7 +15,7 @@ import { TasksModule } from './tasks/tasks.module';
       username: 'postgres',
       password: 'suser',
       database:'apicurso',
-      entities: [User, Task],
+      entities: [User, Task, Product],
       synchronize: true,
     }),
     UsersModule,
