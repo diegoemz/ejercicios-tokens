@@ -13,7 +13,8 @@ export class UsersController {
     @ApiOperation({summary: 'Crear un nuevo usuario'})
     @ApiResponse({status:201, description: 'Usuario creado correctamente'})
     create(@Body() dto:CreateUserDto): Promise<User> {
-        return this.usersService.createUser(dto.nombre, dto.email);
+        return this.usersService.createUser(dto.nombre, dto.email, dto.password);
+
     }
 
     @Get()
