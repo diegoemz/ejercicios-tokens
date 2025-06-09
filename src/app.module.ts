@@ -8,6 +8,7 @@ import { UsersModule } from './users/users.module';
 import { TasksModule } from './tasks/tasks.module';
 import { AuthModule } from './auth/auth.module';
 import { ProductsModule } from './products/products.module';
+import { SettingsModule } from './settings/settings.module';
 
 @Module({
   imports: [
@@ -16,7 +17,7 @@ import { ProductsModule } from './products/products.module';
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: '1989',
+      password: 'suser',
       database: 'apicurso',
       entities: [User, Task, Product],
       synchronize: true,
@@ -29,6 +30,7 @@ import { ProductsModule } from './products/products.module';
     TasksModule,
     AuthModule,
     ProductsModule,
+    SettingsModule,
   ],
 })
 export class AppModule {}
